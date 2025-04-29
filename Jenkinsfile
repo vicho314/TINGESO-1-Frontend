@@ -4,7 +4,12 @@ pipeline {
         nodejs 'nodejs'
     }
     stages{
-        stage('Build maven'){
+    	stage('Npm install'){
+    		steps{
+    			sh 'npm install'
+    		}
+    	}
+        stage('Build npm'){
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vicho314/TINGESO-1-Frontend']])
                 sh 'npm run build'
