@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build maven'){
             steps{
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vicho314/TINGESO-1-Frontend']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vicho314/TINGESO-1-Frontend']])
                 sh 'npm run build'
             }
         }
@@ -28,8 +28,8 @@ pipeline {
         stage('Push image to Docker Hub'){
             steps{
                 script{
-                   withCredentials([usernamePassword(credentialsId: 'passwid', passwordVariable: 'passw')]) {
-                        sh 'docker login -u vicho314 -p $passw'
+                withCredentials([usernamePassword(credentialsId: 'passwid', usernameVariable: 'USERDOCK', passwordVariable: 'PASSWDOCK')]) {
+                        sh 'docker login -u $USERDOCK -p $PASSW'                 
                    }
                    sh 'docker push vicho314/kartingrm-frontend:latest'
                 }
