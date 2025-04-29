@@ -34,7 +34,7 @@ pipeline {
             steps{
                 script{
                 withCredentials([usernamePassword(credentialsId: 'passwid', usernameVariable: 'USERDOCK', passwordVariable: 'PASSWDOCK')]) {
-                        sh 'docker login -u $USERDOCK -p $PASSW'                 
+                        sh 'docker login -u $USERDOCK -p $PASSWDOCK'                 
                    }
                    sh 'docker push vicho314/kartingrm-frontend:latest'
                 }
