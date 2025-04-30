@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import DatePicker from "react-datepicker";
 import discountService from "../services/discount.service";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -16,7 +17,7 @@ const AddEditDiscount = () => {
   const [freqClientCategory, setFreqClientCategory] = useState("");
   //const [totalTime, setTotalTime] = useState("");
   const [specialDayType, setSpecialDayType] = useState("");
-  const [specialDay, setSpecialDay] = useState("");
+  const [specialDay, setSpecialDay] = useState(new Date());
   //const [atBirthDay, setAtBirthDay] = useState("");
   const [percent, setPercent] = useState("");
   //JsonIgnore!!
@@ -174,14 +175,8 @@ const AddEditDiscount = () => {
         </FormControl>
 	
 	<FormControl fullWidth>
-          <TextField
-            id="specialDay"
-            label="Día Especial"
-            value={specialDay}
-            variant="standard"
-            onChange={(e) => setSpecialDay(e.target.value)}
-            helperText="Ej. DD/MM/YYYY"
-          />
+          <DatePicker selected={date} 
+	  onChange={(date) => setSpecialDay(date)} />
         </FormControl>
 
 	<FormControl fullWidth>
