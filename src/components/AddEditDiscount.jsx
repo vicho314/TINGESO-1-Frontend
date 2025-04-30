@@ -110,7 +110,7 @@ const AddEditDiscount = () => {
             label="Categoría"
             value={category}
             variant="standard"
-            onChange={(e) => setCategoria(e.target.value)}
+            onChange={(e) => setCategory(e.target.value)}
             helperText="Ej. Especial"
           />
         </FormControl>
