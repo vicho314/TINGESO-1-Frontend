@@ -83,7 +83,7 @@ const AddEditDiscount = () => {
 	  setSpecialDayType(discount.data.specialDayType);
 	  setSpecialDay(discount.data.specialDay);
 	  //setDiscountTransactionList(discount.data.discountTransactionList);
-	  setDiscountTransactionList(null);
+	  setDiscountTransactionList(discount.data.discountTransactionList);
 	  //setAtBirthDay(discount.data.atBirthDay);
           //setCategory(discount.data.category);
         })
@@ -180,6 +180,17 @@ const AddEditDiscount = () => {
             value={specialDay}
             variant="standard"
             onChange={(e) => setSpecialDay(e.target.value)}
+            helperText="Ej. DD/MM/YYYY"
+          />
+        </FormControl>
+
+	<FormControl fullWidth>
+          <TextField
+            id="discountTransactionList"
+            label="DiscountTransactionList"
+            value={discountTransactionList}
+            variant="standard"
+            onChange={(e) => setDiscountTransactionList([e.target.value])}
             helperText="Ej. DD/MM/YYYY"
           />
         </FormControl>
