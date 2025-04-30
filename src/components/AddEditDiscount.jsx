@@ -28,6 +28,7 @@ const AddEditDiscount = () => {
 
   const saveDiscount = (e) => {
     e.preventDefault();
+	  console.log(e);
 
     const discount = { category, groupRangeMin, groupRangeMax, 
 	    freqClientCategory, specialDayType,specialDay, percent,
@@ -201,7 +202,7 @@ const AddEditDiscount = () => {
           <Button
             variant="contained"
             color="info"
-            onClick={(e) => saveDiscount(e); console.log(e);}
+            onClick={(e) => saveDiscount(e)}
             style={{ marginLeft: "0.5rem" }}
             startIcon={<SaveIcon />}
           >
