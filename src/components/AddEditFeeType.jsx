@@ -86,48 +86,50 @@ const AddEditFeeType = () => {
       <form>
         <FormControl fullWidth>
           <TextField
-            id="rut"
-            label="Rut"
-            value={rut}
+            id="laps"
+            label="Vueltas"
+            value={laps}
+	    type="number"
             variant="standard"
-            onChange={(e) => setRut(e.target.value)}
-            helperText="Ej. 12.587.698-8"
+            onChange={(e) => setLaps(e.target.value)}
+            helperText="Ej. 10"
           />
         </FormControl>
 
         <FormControl fullWidth>
           <TextField
-            id="name"
-            label="Name"
-            value={name}
+            id="lapsTime"
+            label="Duración máxima"
+            value={lapsTime}
+	    type="number"
             variant="standard"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setLapsTime(e.target.value)}
           />
         </FormControl>
 
         <FormControl fullWidth>
           <TextField
-            id="salary"
-            label="Salary"
+            id="cost"
+            label="Costo"
             type="number"
-            value={salary}
+            value={cost}
             variant="standard"
-            onChange={(e) => setSalary(e.target.value)}
+            onChange={(e) => setCost(e.target.value)}
             helperText="Salario mensual en Pesos Chilenos"
           />
         </FormControl>
 
         <FormControl fullWidth>
           <TextField
-            id="children"
-            label="Children"
+            id="totalTime"
+            label="Tiempo Total"
             type="number"
-            value={children}
+            value={totalTime}
             variant="standard"
-            onChange={(e) => setChildren(e.target.value)}
+            onChange={(e) => setTotalTime(e.target.value)}
           />
         </FormControl>
-
+	  {/*
         <FormControl fullWidth>
           <TextField
             id="category"
@@ -144,7 +146,7 @@ const AddEditFeeType = () => {
             <MenuItem value={"C"}>C</MenuItem>
           </TextField>
         </FormControl>
-
+	*/}
         <FormControl>
           <br />
           <Button

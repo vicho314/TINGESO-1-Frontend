@@ -7,6 +7,8 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import Person from "@mui/icons-material/Person"
+import DateRange from "@mui/icons-material/DateRange"
 import PaidIcon from "@mui/icons-material/Paid";
 import CalculateIcon from "@mui/icons-material/Calculate";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
@@ -35,63 +37,50 @@ export default function Sidemenu({ open, toggleDrawer }) {
 
         <Divider />
 
-        <ListItemButton onClick={() => navigate("/employee/list")}>
+        <ListItemButton onClick={() => navigate("/feetype/list")}>
           <ListItemIcon>
             <PeopleAltIcon />
           </ListItemIcon>
-          <ListItemText primary="Empleados" />
+          <ListItemText primary="Tarifas" />
         </ListItemButton>
 
-        <ListItemButton onClick={() => navigate("/extraHours/list")}>
-          <ListItemIcon>
-            <MoreTimeIcon />
-          </ListItemIcon>
-          <ListItemText primary="Horas Extra" />
-        </ListItemButton>
-
-        <ListItemButton onClick={() => navigate("/paycheck/list")}>
-          <ListItemIcon>
-            <PaidIcon />
-          </ListItemIcon>
-          <ListItemText primary="Planilla Sueldos" />
-        </ListItemButton>
-
-        <ListItemButton onClick={() => navigate("/paycheck/calculate")}>
-          <ListItemIcon>
-            <CalculateIcon />
-          </ListItemIcon>
-          <ListItemText primary="Calcular Planilla" />
-        </ListItemButton>
-        <ListItemButton onClick={() => navigate("/reports/AnualReport")}>
-          <ListItemIcon>
-            <AnalyticsIcon />
-          </ListItemIcon>
-          <ListItemText primary="Gráficos Planillas" />
-        </ListItemButton>
-      </List>
-
-      <Divider />
-
-      <List>
-        <ListItemButton onClick={() => navigate("/employee/discounts")}>
+        <ListItemButton onClick={() => navigate("/discount/list")}>
           <ListItemIcon>
             <DiscountIcon />
           </ListItemIcon>
           <ListItemText primary="Descuentos" />
         </ListItemButton>
-        <ListItemButton onClick={() => navigate("/paycheck/vacations")}>
+
+        <ListItemButton onClick={() => navigate("/transaction/list")}>
           <ListItemIcon>
-            <HailIcon />
+            <PaidIcon />
           </ListItemIcon>
-          <ListItemText primary="Vacaciones" />
+          <ListItemText primary="Registro de transacciones" />
         </ListItemButton>
-        <ListItemButton onClick={() => navigate("/paycheck/medicalleave")}>
+
+        <ListItemButton onClick={() => navigate("/client")}>
           <ListItemIcon>
-            <MedicationLiquidIcon />
+            <Person />
           </ListItemIcon>
-          <ListItemText primary="Licencias Medicas" />
+          <ListItemText primary="Cliente" />
         </ListItemButton>
+
+        <ListItemButton onClick={() => navigate("/calendar")}>
+          <ListItemIcon>
+            <DateRange />
+          </ListItemIcon>
+          <ListItemText primary="Rack semanal" />
+        </ListItemButton>
+      
+	<ListItemButton onClick={() => navigate("/report")}>
+          <ListItemIcon>
+            <AnalyticsIcon />
+          </ListItemIcon>
+          <ListItemText primary="Rack semanal" />
+        </ListItemButton>
+
       </List>
+
     </Box>
   );
 
