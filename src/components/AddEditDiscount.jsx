@@ -130,7 +130,7 @@ const AddEditDiscount = () => {
             label="Categ. Frecuencia"
             value={freqClientCategory}
             variant="standard"
-            onChange={(e) => setFreqClientCategory{e.target.value)}
+            onChange={(e) => setFreqClientCategory(e.target.value)}
 	    style={{ width: "35%" }}
           >
             <MenuItem value={"MF"}>Muy Frecuente</MenuItem>
@@ -146,7 +146,7 @@ const AddEditDiscount = () => {
             label="Tipo Día Especial"
             value={specialDayType}
             variant="standard"
-            onChange={(e) => setSpecialDayType{e.target.value)}
+            onChange={(e) => setSpecialDayType(e.target.value)}
 	    style={{ width: "35%" }}
           >
             <MenuItem value={"Birth"}>Cumpleaños</MenuItem>
