@@ -175,8 +175,8 @@ const AddEditDiscount = () => {
         </FormControl>
 	
 	<FormControl fullWidth>
-          <DatePicker selected={date} 
-	  onChange={(date) => setSpecialDay(date)} />
+          <DatePicker selected={specialDay} 
+	  onChange={(e) => setSpecialDay(e.target.value)} />
         </FormControl>
 
 	<FormControl fullWidth>
