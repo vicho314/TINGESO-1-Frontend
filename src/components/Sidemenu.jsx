@@ -6,7 +6,8 @@ import Divider from "@mui/material/Divider";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import PeopleAltIcon from "@mui/icons-material/";
+import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import Person from "@mui/icons-material/Person"
 import DateRange from "@mui/icons-material/DateRange"
 import PaidIcon from "@mui/icons-material/Paid";
@@ -39,7 +40,7 @@ export default function Sidemenu({ open, toggleDrawer }) {
 
         <ListItemButton onClick={() => navigate("/feetype/list")}>
           <ListItemIcon>
-            <PeopleAltIcon />
+            <FormatListNumberedIcon />
           </ListItemIcon>
           <ListItemText primary="Tarifas" />
         </ListItemButton>

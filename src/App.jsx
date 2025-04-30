@@ -4,13 +4,13 @@ import Navbar from "./components/Navbar";
 import Home from './components/Home';
 import AddEditFeeType from './components/AddEditFeeType';
 import AddEditDiscount from './components/AddEditDiscount';
-import Calendar from './components/Calendar';
-import ClientForm from './components/ClientForm';
+//import Calendar from './components/Calendar';
+//import ClientForm from './components/ClientForm';
 import DiscountList from './components/DiscountList';
 import FeeTypeList from './components/FeeTypeList';
-import TransactionList from './components/TransactionList';
-import MakeTransaction from './components/MakeTransaction';
-import Report from './components/Report';
+//import TransactionList from './components/TransactionList';
+//import MakeTransaction from './components/MakeTransaction';
+//import Report from './components/Report';
 //import Sidemenu from './components/Sidemenu';
 /*
 import EmployeeList from './components/EmployeesList';
@@ -37,10 +37,11 @@ function App() {
 	      <Route path="/discount/add" element={<AddEditDiscount/>} />
               <Route path="/discount/edit/:id" element={<AddEditDiscount/>} />
 	      <Route path="/discount/list" element={<DiscountList/>} />
-	      <Route path="/transaction/list" element={<TransactionList/>} />
+	  {/* <Route path="/transaction/list" element={<TransactionList/>} />
 	      <Route path="/client" element={<ClientForm/>} /> 
 	      <Route path="/calendar" element={<Calendar/>} />
 	      <Route path="/report" element={<Report/>} />   
+	      */}
 	      <Route path="*" element={<NotFound/>} />
             </Routes>
           </div>
