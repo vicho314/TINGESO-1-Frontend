@@ -3,6 +3,8 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import discountService from "../services/discount.service";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import DateField from '@mui/x-date-pickers/DateField';
+import Button from "@mui/material/Button";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
@@ -171,6 +173,18 @@ const AddEditDiscount = () => {
 	  </TextField>
         </FormControl>
 	
+	<FormControl fullWidth>
+          <DateField
+            id="specialDay"
+            label="Día Especial"
+            value={specialDay}
+            variant="standard"
+            onChange={(e) => setSpecialDay(e.target.value)}
+            helperText="Ej. DD/MM/YYYY"
+          />
+        </FormControl>
+
+
 	<FormControl fullWidth>
           <TextField
             id="percent"
