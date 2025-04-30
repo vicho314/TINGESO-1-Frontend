@@ -76,7 +76,7 @@ const FeeTypeList = () => {
           color="primary"
           startIcon={<FormatListNumberedIcon />}
         >
-          Añadir tarifa
+          Crear tarifa
         </Button>
       </Link>
       <br /> <br />
