@@ -201,7 +201,7 @@ const AddEditDiscount = () => {
           <Button
             variant="contained"
             color="info"
-            onClick={(e) => saveDiscount(e)}
+            onClick={(e) => saveDiscount(e); console.log(e);}
             style={{ marginLeft: "0.5rem" }}
             startIcon={<SaveIcon />}
           >
