@@ -146,7 +146,7 @@ const AddEditDiscount = () => {
             label="Categ. Frecuencia"
             value={freqClientCategory}
             variant="standard"
-            onChange={(e) => setFreqClientCategory(e.target.value); setDiscountTransactionList(null);}
+            onChange={(e) => {setFreqClientCategory(e.target.value); setDiscountTransactionList(null);}}
 	    style={{ width: "35%" }}
           >
             <MenuItem value={"MF"}>Muy Frecuente</MenuItem>
