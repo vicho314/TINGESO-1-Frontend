@@ -19,7 +19,7 @@ const AddEditDiscount = () => {
   //const [atBirthDay, setAtBirthDay] = useState("");
   const [percent, setPercent] = useState("");
   //JsonIgnore!!
-  //const [discountTransactionList, setDiscountTransactionList] = useState("");
+  const [discountTransactionList, setDiscountTransactionList] = useState("");
   //const [category, setCategory] = useState("");
   const { id } = useParams();
   const [titleDiscountForm, setTitleDiscountForm] = useState("");
@@ -29,7 +29,8 @@ const AddEditDiscount = () => {
     e.preventDefault();
 
     const discount = { category, groupRangeMin, groupRangeMax, 
-	    freqClientCategory, specialDayType,specialDay,
+	    freqClientCategory, specialDayType,specialDay, percent,
+	    discountTransactionList,
 	    id };
     if (id) {
       //Actualizar Datos Empelado
@@ -72,12 +73,15 @@ const AddEditDiscount = () => {
         .get(id)
         .then((discount) => {
           setCategory(discount.data.category);
+	  setPercent(discount.data.percent);
           setGroupRangeMin(discount.data.groupRangeMin);
           setGroupRangeMax(discount.data.groupRangeMax);
 	  setFreqClientCategory(discount.data.freqClientCategory);
           //setTotalTime(discount.data.totalTime);
 	  setSpecialDayType(discount.data.specialDayType);
 	  setSpecialDay(discount.data.specialDay);
+	  //setDiscountTransactionList(discount.data.discountTransactionList);
+	  setDiscountTransactionList(null);
 	  //setAtBirthDay(discount.data.atBirthDay);
           //setCategory(discount.data.category);
         })
@@ -101,6 +105,17 @@ const AddEditDiscount = () => {
       <hr />
       <form>
         <FormControl fullWidth>
+          <TextField
+            id="category"
+            label="Categoría"
+            value={category}
+            variant="standard"
+            onChange={(e) => setCategoria(e.target.value)}
+            helperText="Ej. Especial"
+          />
+        </FormControl>
+
+	  <FormControl fullWidth>
           <TextField
             id="groupRangeMin"
             label="Mín. Personas"
@@ -155,6 +170,18 @@ const AddEditDiscount = () => {
             <MenuItem value={"Otro"}>Otro</MenuItem>
 	  </TextField>
         </FormControl>
+	
+	<FormControl fullWidth>
+          <TextField
+            id="percent"
+            label="Percent"
+            value={percent}
+	    type="number"
+            variant="standard"
+            onChange={(e) => setPercent(e.target.value)}
+            helperText="Ej. 20,50"
+          />
+        </FormControl>	
 
         <FormControl>
           <br />
