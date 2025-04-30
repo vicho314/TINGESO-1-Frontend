@@ -22,7 +22,7 @@ const AddEditDiscount = () => {
   //const [discountTransactionList, setDiscountTransactionList] = useState("");
   //const [category, setCategory] = useState("");
   const { id } = useParams();
-  const [titleDiscountForm, setDiscountForm] = useState("");
+  const [titleDiscountForm, setTitleDiscountForm] = useState("");
   const navigate = useNavigate();
 
   const saveDiscount = (e) => {
